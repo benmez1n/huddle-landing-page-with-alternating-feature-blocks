@@ -1,0 +1,186 @@
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0
+}
+body{font-family:"Open Sans";color:hsl(192, 100%, 9%)}
+.container{margin:auto}
+p{font-size:15px;line-height: 1.7;}
+h1,h2{font-family: Poppins;margin-bottom:15px;}
+button,
+#head-butt{
+    background-color: hsl(322, 100%, 66%);
+    color:hsl(193, 100%, 96%);
+    border:none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px gainsboro;
+}
+#head-butt{
+    color:hsl(192, 100%, 9%);
+    background-color:white;
+}
+button:hover{
+    opacity: 0.7;
+    transition: all ease-in 0.5s;
+}
+header{background-color: hsl(193, 100%, 96%);padding:5% 0}
+#head-of-header{display: flex;justify-content: space-between;}
+#header-content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+#header-content div{margin:5% auto 0 0 ;}
+#header-content button{margin-top: 8%;}
+
+section{
+    display: flex;
+    margin:3.5% auto;
+}
+section{
+    box-shadow: 5px 5px 10px gainsboro,
+                -5px -5px 10px gainsboro;
+}
+section,
+#outer-box{
+    border-radius:10px;
+}
+section:first-of-type{margin-top:10%}
+
+footer{
+    background-color:hsl(192, 100%, 9%);
+    color:hsl(193, 100%, 96%);
+}
+
+ul{
+    list-style: none;
+    padding-inline-start: 0;
+}
+#list{
+    display: flex;
+    justify-content: space-between;
+}
+#list li{margin-bottom:8%}
+#list span{margin-left:3%;}
+#list ul:not(:first-of-type) li{margin-bottom: 35%;}
+#list ul:nth-of-type(2) li:hover,
+#list ul:nth-of-type(3) li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#list ul:last-of-type{
+    display: flex;
+    width:120px;
+    justify-content: space-between;
+    font-size: 30px;
+}
+#list a{color:hsl(193, 100%, 96%) ;}
+#outer-box{
+    background-color: white;
+    color:hsl(192, 100%, 9%);
+    margin:2% auto 0;
+    padding:5%;
+    transform: translateY(50%);
+    box-shadow: 2px 2px 3px gainsboro,
+                -2px -2px 3px gainsboro;
+}
+
+i:hover{color:hsl(322, 100%, 66%)}
+
+
+@media (max-width:769px){
+    .container{
+        width:80%;
+        text-align: center;
+    }
+    button{width:fit-content;padding:5% 8%;}
+    #outer-box button{
+        padding:4% 8%;
+        font-size: 14px;
+    }
+    #head-of-header img{width:50%;height: 60%;margin-top:4%}
+    #header-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    #header-content >img{margin:50px 0;width:100%}
+    section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:10%;
+    }
+    section img{width:80%;height: 80%;margin-bottom:10px}
+    header .container{background-image: url(../images/bg-hero-mobile.svg);}
+    #head-of-header{margin-bottom: 50px;}
+    section{width:auto;flex-direction: column;}
+    footer:first-of-type{ padding-top:20%}
+    footer .container >img{
+        margin:0;
+        width:50%;height: 60%;
+    }
+    #list {
+        margin-top:10%;
+        text-align: left;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #outer-box{
+        display: flex;
+        font-size:xx-small;
+        flex-direction: column;
+        width:90%;
+        align-items: center;
+    }
+    #list ul:last-of-type{
+        margin:0 auto;
+    }
+}
+
+
+/*Desktop*/
+@media (min-width:1200px){
+    .container{width:1170px;}
+    button{
+        width:250px;
+        padding:15px 0;
+    }
+    header .container{background-image: url("../images/bg-hero-desktop.svg")}
+    #header-content div{width:400px}
+    #header-content img{width:60%;height: 50%;}
+    section{width:1100px;}
+    section img{width:30%;height: 30%;}
+    section div{margin:8% auto;width:450px}
+    section img{margin:auto;padding: 50px 0;}
+    section:not(:nth-of-type(2)){flex-direction: row-reverse;}
+    footer:first-of-type{ padding-top:13%}
+    footer .container >img{width: 15%;}
+    #list{margin-top:3%;}
+    #list ul:first-of-type{width:400px;}
+    #outer-box{
+        width:60%;
+        text-align: center;
+    }
+    #outer-box button{
+        width:60%;
+        height: 65px;
+        border-radius:30px;
+        font-size: 20px;
+        margin-top:10px;
+    }
+    #rights{float:right;}
+}
+
+.attribution { font-size: 14px; text-align: center;padding-bottom: 20px; }
+.attribution a { color: hsl(113, 92%, 35%); }
+@font-face {
+    font-family: Poppins;
+    src: url(../font/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "Open Sans";
+    src: url(../font/OpenSans-Regular.ttf);
+}
